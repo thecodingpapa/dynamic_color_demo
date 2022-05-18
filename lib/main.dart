@@ -7,7 +7,7 @@ void main() {
   runApp(const DynamicColorDemo());
 }
 
-const seedColor = Color(0xffc1e945);
+const seedColor = Color(0xff00ffff);
 const outPadding = 32.0;
 
 class DynamicColorDemo extends StatelessWidget {
@@ -17,8 +17,13 @@ class DynamicColorDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: seedColor, brightness: Brightness.dark),
+        /***
+         * You can also do this instead of ColorScheme.fromSeed()
+         */
+        colorSchemeSeed: seedColor,
+        brightness: Brightness.dark,
+        // colorScheme: ColorScheme.fromSeed(
+        //     seedColor: seedColor, brightness: Brightness.dark),
         textTheme: GoogleFonts.notoSansNKoTextTheme(
           Theme.of(context)
               .textTheme, // If this is not set, then ThemeData.light().textTheme is used.

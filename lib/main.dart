@@ -7,7 +7,7 @@ void main() {
   runApp(const DynamicColorDemo());
 }
 
-const seedColor = Color(0xff00ffff);
+const seedColor = Color(0xffc1e945);
 const outPadding = 32.0;
 
 class DynamicColorDemo extends StatelessWidget {
